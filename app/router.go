@@ -8,7 +8,6 @@ import (
 )
 
 func NewRouter(categoryController controller.CategoryController) *httprouter.Router{
-	// penggunaan pointer *httprouter.Router karena Router tersebut adalah sebuah struct di dalam package httprouter
 	router := httprouter.New()
 
 	router.GET("/api/categories", categoryController.FindAll)
