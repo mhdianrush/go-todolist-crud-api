@@ -9,7 +9,6 @@ func ReadFromRequestBody(request *http.Request, result interface{}) {
 	decoder := json.NewDecoder(request.Body)
 	err := decoder.Decode(result)
 	PanicIfError(err)
-	// disini tidak lagi dituliskan helper.PanicIfError karena ini kan berada di dalam package helper dan berada di dalam package yg sama
 }
 
 func WriteToResponseBody(writer http.ResponseWriter, response interface{}) {
